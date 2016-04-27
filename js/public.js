@@ -8,7 +8,7 @@ $.get("https://api.github.com/orgs/jpush/repos",function(data,status){
     var repos=document.getElementById("repos");
     for (var i=0; i < obj.length;i++) {
           var ul=document.createElement("ul"); 
-          ul.setAttribute("class","col-md-3 col-sm-4 col-xs-6"); 
+          ul.setAttribute("class","col-md-4 col-sm-6 col-xs-12"); 
 
           var ul_div=document.createElement("div");
           ul_div.setAttribute("class","ul_div"); 
@@ -43,6 +43,9 @@ $.get("https://api.github.com/orgs/jpush/repos",function(data,status){
         }
     }
 );
+
+$("#wrap").css("background-color","#6e95ab");
+
 $.get("https://api.github.com/orgs/jpush/repos?page=1&per_page=100",function(data,status){
     $("#num-repos").text(data.length);
 
