@@ -30,6 +30,7 @@ push = _jpush.create_push()
 
 ####  audience 设置
 
+##### tag 设置
 ```
 tag(*tags)
 ```
@@ -38,6 +39,11 @@ tag(*tags)
 
 tags 例如：tag("tag1", "tag2")
 
+
+返回值
+> payload 字典
+
+##### tag_and 设置
 ```
 tag_and(*tag_ands)
 ```
@@ -46,6 +52,10 @@ tag_and(*tag_ands)
 
 tags 例如：tag_and("tag1", "tag2")
 
+返回值
+> payload 字典
+
+##### alias 设置
 ```
 alias(*alias)
 ```
@@ -54,6 +64,10 @@ alias(*alias)
 
 alias 例如：alias("alias1", "alias2")
 
+返回值
+> payload 字典
+
+##### registration_id 设置
 ```
 registration_id(*reg_ids)
 ```
@@ -65,6 +79,8 @@ registration_id 例如：tag("registration_id1", "registration_id2")
 返回值
 
 > payload 字典
+
+##### 推送目标说明
 
 推送设备对象，表示一条推送可以被推送到哪些设备列表。确认推送设备对象，JPush 提供了多种方式，比如：别名、标签、注册ID、分群、广播等。
 
@@ -298,11 +314,13 @@ message(msg_content, title=None, content_type=None, extras=None)
 
 返回值
 
->
+>message payload
+
 ####  smsmessage 设置
 ```
 smsmessage(content,delay_time)
 ```
+
 *  参数说明
 
 <div class="table-d" align="center" >
@@ -330,7 +348,7 @@ smsmessage(content,delay_time)
 
 *  返回值
 
->
+> smsmessage payload
 ####  platform 设置
 ```
 platform(*types)
@@ -341,7 +359,8 @@ JPush 当前支持 Android, iOS, Windows Phone 三个平台的推送。其关键
 
 *  返回值
 
->
+> platform tuple
+
 ####  options 设置
 ```
 options(options)
@@ -397,7 +416,7 @@ options(options)
 
 *  返回值
 
->
+> options 字典
 
 ## Device api
 ## Schedule api
