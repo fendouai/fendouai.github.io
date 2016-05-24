@@ -130,22 +130,23 @@ notification(alert=None, ios=None, android=None, winphone=None)
 
 * ios
 
-> ios payload
+>  ios payload 字典 查看 [ios payload](https://github.com/fendouai/fendouai.github.io/blob/master/README.md#ios-payload)
 
 * android
 
-> android payload
+>  android payload 字典 查看 [android payload](https://github.com/fendouai/fendouai.github.io/blob/master/README.md#android-payload)
 
 
 返回值
 
 > notification payload
 
-####  ios payload
+#####  ios payload
 ```
 ios(alert=None, badge=None, sound=None, content_available=False,
     extras=None, sound_disable=False)
 ```
+
 参数说明
 <div class="table-d" align="center" >
 	<table border="1" width = "100%">
@@ -205,7 +206,7 @@ ios(alert=None, badge=None, sound=None, content_available=False,
 
 > ios payload 字典
 
-####  android payload
+#####  android payload
 ```
 android(alert, title=None, builder_id=None, extras=None)
 ```
