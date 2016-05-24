@@ -18,10 +18,11 @@ _jpush = jpush.JPush(app_key, master_secret)
 ## Push api
 
 ###  初始化push对象
+
 ```
 push = _jpush.create_push()
 ```
-参数说明
+参数说明 （无）
 
 返回值
 
@@ -31,20 +32,47 @@ push = _jpush.create_push()
 
 ```
 tag(*tags)
+```
+
+参数说明
+
+tags 例如：tag("tag1", "tag2")
+
+```
 tag_and(*tag_ands)
+```
+
+参数说明
+
+tags 例如：tag_and("tag1", "tag2")
+
+```
 alias(*alias)
+```
+
+参数说明
+
+alias 例如：alias("alias1", "alias2")
+
+```
 registration_id(*reg_ids)
 ```
 
 参数说明
 
+registration_id 例如：tag("registration_id1", "registration_id2")
+
+返回值
+
+> payload 字典
+
 推送设备对象，表示一条推送可以被推送到哪些设备列表。确认推送设备对象，JPush 提供了多种方式，比如：别名、标签、注册ID、分群、广播等。
 
-##### all
+* all
 
 如果要发广播（全部设备），则直接填写 “all”。
 
-##### 推送目标
+* 推送目标
 
 广播外的设备选择方式，有如下几种：
 
@@ -88,9 +116,6 @@ registration_id(*reg_ids)
 	</table>
 </div>
 
-
-返回值
-> payload 字典 
 
 ####  notification 设置
 ```
@@ -376,4 +401,3 @@ options(options)
 ## Device api
 ## Schedule api
 ## Report api
-
